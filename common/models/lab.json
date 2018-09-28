@@ -1,0 +1,38 @@
+{
+  "name": "Lab",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "required": false
+    },
+    "tipo": {
+      "type": "string",
+      "required": false
+    },
+    "nome": {
+      "type": "string",
+      "required": false
+    },
+    "endereco": {
+      "type": "string",
+      "required": false
+    },
+    "escopo": {
+      "type": "string",
+      "required": false
+    },
+    "ativo": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

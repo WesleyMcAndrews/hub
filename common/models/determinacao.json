@@ -1,0 +1,30 @@
+{
+  "name": "Determinacao",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "required": false
+    },
+    "descricao": {
+      "type": "string",
+      "required": false
+    },
+    "codigo": {
+      "type": "string",
+      "required": false
+    },
+    "ativo": {
+      "type": "boolean",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

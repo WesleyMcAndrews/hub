@@ -1,0 +1,30 @@
+{
+  "name": "Roteamento",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "required": false
+    },
+    "municipioId": {
+      "type": "string",
+      "required": false
+    },
+    "modalId": {
+      "type": "string",
+      "required": false
+    },
+    "labDestinoId": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

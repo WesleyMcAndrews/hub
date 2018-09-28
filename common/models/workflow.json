@@ -1,0 +1,42 @@
+{
+  "name": "Workflow",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "required": false
+    },
+    "tipoLabCustodia": {
+      "type": "string",
+      "required": true
+    },
+    "determinacaoId": {
+      "type": "string",
+      "required": true
+    },
+    "resultadoQualitativo": {
+      "type": "string",
+      "required": true
+    },
+    "tipoLabDestino": {
+      "type": "string",
+      "required": true
+    },
+    "obs": {
+      "type": "string",
+      "required": false
+    },
+    "ativo": {
+      "type": "boolean",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

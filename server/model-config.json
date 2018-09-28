@@ -24,5 +24,33 @@
   "Custodia": {
     "dataSource": "bd",
     "public": true
+  },
+  "Workflow": {
+    "dataSource": "bd",
+    "public": true
+  },
+  "Lab": {
+    "dataSource": "bd",
+    "public": true
+  },
+  "Roteamento": {
+    "dataSource": "bd",
+    "public": true
+  },
+  "Demandante": {
+    "dataSource": "bd",
+    "public": true
+  },
+  "Determinacao": {
+    "dataSource": "bd",
+    "public": true
+  },
+  "ClasseMatriz": {
+    "dataSource": "bd",
+    "public": true
+  },
+  "Amostra": {
+    "dataSource": null,
+    "public": true
   }
 }
