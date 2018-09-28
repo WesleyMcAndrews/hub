@@ -1,0 +1,30 @@
+{
+  "name": "endereco",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "endereco": {
+      "type": "string",
+      "required": true
+    },
+    "cidade": {
+      "type": "string",
+      "required": true
+    },
+    "uf": {
+      "type": "string",
+      "required": false
+    },
+    "cep": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

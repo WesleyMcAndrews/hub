@@ -1,0 +1,32 @@
+{
+  "name": "Remessa",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "id": true,
+      "required": true,
+      "isArray": false
+    },
+    "demandanteId": {
+      "type": "string",
+      "required": true
+    },
+    "sif": {
+      "type": "string",
+      "required": false
+    },
+    "dataRemessa": {
+      "type": "date",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

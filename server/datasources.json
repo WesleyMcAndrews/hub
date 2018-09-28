@@ -1,0 +1,6 @@
+{
+  "bd": {
+    "name": "bd",
+    "connector": "memory"
+  }
+}

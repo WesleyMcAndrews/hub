@@ -1,0 +1,1170 @@
+paths:
+  /Remessas:
+    post:
+      tags:
+        - Remessa
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: Remessa.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Remessa'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Remessa'
+      deprecated: false
+    patch:
+      tags:
+        - Remessa
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: Remessa.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Remessa'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Remessa'
+      deprecated: false
+    put:
+      tags:
+        - Remessa
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: Remessa.replaceOrCreate__put_Remessas
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Remessa'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Remessa'
+      deprecated: false
+    get:
+      tags:
+        - Remessa
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: Remessa.find
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Remessa'
+      deprecated: false
+  /Remessas/replaceOrCreate:
+    post:
+      tags:
+        - Remessa
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: Remessa.replaceOrCreate__post_Remessas_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Remessa'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Remessa'
+      deprecated: false
+  /Remessas/upsertWithWhere:
+    post:
+      tags:
+        - Remessa
+      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
+      operationId: Remessa.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Remessa'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Remessa'
+      deprecated: false
+  '/Remessas/{id}/exists':
+    get:
+      tags:
+        - Remessa
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Remessa.exists__get_Remessas_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/Remessas/{id}':
+    head:
+      tags:
+        - Remessa
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Remessa.exists__head_Remessas_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - Remessa
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: Remessa.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: 'Filter defining fields and include - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Remessa'
+      deprecated: false
+    put:
+      tags:
+        - Remessa
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: 'Remessa.replaceById__put_Remessas_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Remessa'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Remessa'
+      deprecated: false
+    delete:
+      tags:
+        - Remessa
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: Remessa.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - Remessa
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: Remessa.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Remessa'
+        - name: id
+          in: path
+          description: Remessa id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Remessa'
+      deprecated: false
+  '/Remessas/{id}/replace':
+    post:
+      tags:
+        - Remessa
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: 'Remessa.replaceById__post_Remessas_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Remessa'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Remessa'
+      deprecated: false
+  /Remessas/findOne:
+    get:
+      tags:
+        - Remessa
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: Remessa.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Remessa'
+      deprecated: false
+  /Remessas/update:
+    post:
+      tags:
+        - Remessa
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: Remessa.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Remessa'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /Remessas/count:
+    get:
+      tags:
+        - Remessa
+      summary: Count instances of the model matched by where from the data source.
+      operationId: Remessa.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /enderecos:
+    post:
+      tags:
+        - endereco
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: endereco.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/endereco'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/endereco'
+      deprecated: false
+    patch:
+      tags:
+        - endereco
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: endereco.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/endereco'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/endereco'
+      deprecated: false
+    put:
+      tags:
+        - endereco
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: endereco.replaceOrCreate__put_enderecos
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/endereco'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/endereco'
+      deprecated: false
+    get:
+      tags:
+        - endereco
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: endereco.find
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/endereco'
+      deprecated: false
+  /enderecos/replaceOrCreate:
+    post:
+      tags:
+        - endereco
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: endereco.replaceOrCreate__post_enderecos_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/endereco'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/endereco'
+      deprecated: false
+  /enderecos/upsertWithWhere:
+    post:
+      tags:
+        - endereco
+      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
+      operationId: endereco.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/endereco'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/endereco'
+      deprecated: false
+  '/enderecos/{id}/exists':
+    get:
+      tags:
+        - endereco
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'endereco.exists__get_enderecos_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/enderecos/{id}':
+    head:
+      tags:
+        - endereco
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'endereco.exists__head_enderecos_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - endereco
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: endereco.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: 'Filter defining fields and include - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/endereco'
+      deprecated: false
+    put:
+      tags:
+        - endereco
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: 'endereco.replaceById__put_enderecos_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/endereco'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/endereco'
+      deprecated: false
+    delete:
+      tags:
+        - endereco
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: endereco.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - endereco
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: endereco.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/endereco'
+        - name: id
+          in: path
+          description: endereco id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/endereco'
+      deprecated: false
+  '/enderecos/{id}/replace':
+    post:
+      tags:
+        - endereco
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: 'endereco.replaceById__post_enderecos_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/endereco'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/endereco'
+      deprecated: false
+  /enderecos/findOne:
+    get:
+      tags:
+        - endereco
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: endereco.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/endereco'
+      deprecated: false
+  /enderecos/update:
+    post:
+      tags:
+        - endereco
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: endereco.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/endereco'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /enderecos/count:
+    get:
+      tags:
+        - endereco
+      summary: Count instances of the model matched by where from the data source.
+      operationId: endereco.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /Custodia:
+    post:
+      tags:
+        - Custodia
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: Custodia.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Custodia'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Custodia'
+      deprecated: false
+    patch:
+      tags:
+        - Custodia
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: Custodia.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Custodia'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Custodia'
+      deprecated: false
+    put:
+      tags:
+        - Custodia
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: Custodia.replaceOrCreate__put_Custodia
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Custodia'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Custodia'
+      deprecated: false
+    get:
+      tags:
+        - Custodia
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: Custodia.find
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Custodia'
+      deprecated: false
+  /Custodia/replaceOrCreate:
+    post:
+      tags:
+        - Custodia
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: Custodia.replaceOrCreate__post_Custodia_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Custodia'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Custodia'
+      deprecated: false
+  /Custodia/upsertWithWhere:
+    post:
+      tags:
+        - Custodia
+      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
+      operationId: Custodia.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Custodia'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Custodia'
+      deprecated: false
+  '/Custodia/{id}/exists':
+    get:
+      tags:
+        - Custodia
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Custodia.exists__get_Custodia_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/Custodia/{id}':
+    head:
+      tags:
+        - Custodia
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Custodia.exists__head_Custodia_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - Custodia
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: Custodia.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: 'Filter defining fields and include - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Custodia'
+      deprecated: false
+    put:
+      tags:
+        - Custodia
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: 'Custodia.replaceById__put_Custodia_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Custodia'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Custodia'
+      deprecated: false
+    delete:
+      tags:
+        - Custodia
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: Custodia.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - Custodia
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: Custodia.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Custodia'
+        - name: id
+          in: path
+          description: Custodia id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Custodia'
+      deprecated: false
+  '/Custodia/{id}/replace':
+    post:
+      tags:
+        - Custodia
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: 'Custodia.replaceById__post_Custodia_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Custodia'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Custodia'
+      deprecated: false
+  /Custodia/findOne:
+    get:
+      tags:
+        - Custodia
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: Custodia.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Custodia'
+      deprecated: false
+  /Custodia/update:
+    post:
+      tags:
+        - Custodia
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: Custodia.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Custodia'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /Custodia/count:
+    get:
+      tags:
+        - Custodia
+      summary: Count instances of the model matched by where from the data source.
+      operationId: Custodia.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+definitions:
+  Remessa:
+    properties:
+      id:
+        type: string
+      demandanteId:
+        type: string
+      sif:
+        type: string
+      dataRemessa:
+        type: string
+        format: date-time
+    required:
+      - id
+      - demandanteId
+    additionalProperties: false
+  x-any:
+    properties: {}
+  endereco:
+    properties:
+      endereco:
+        type: string
+      cidade:
+        type: string
+      uf:
+        type: string
+      cep:
+        type: string
+      id:
+        type: number
+        format: double
+    required:
+      - endereco
+      - cidade
+    additionalProperties: false
+  Custodia:
+    properties:
+      labId:
+        type: string
+      dataCustodia:
+        type: string
+        format: date-time
+      obs:
+        type: string
+      id:
+        type: number
+        format: double
+    additionalProperties: false
+basePath: /api
+swagger: '2.0'
+info:
+  x-ibm-name: hub
+  version: 1.0.0
+  title: hub
+schemes:
+  - https
+host: $(catalog.host)
+consumes:
+  - application/json
+produces:
+  - application/json
+securityDefinitions:
+  clientIdHeader:
+    type: apiKey
+    in: header
+    name: X-IBM-Client-Id
+  clientSecretHeader:
+    in: header
+    name: X-IBM-Client-Secret
+    type: apiKey
+security:
+  - clientIdHeader: []
+    clientSecretHeader: []
+x-ibm-configuration:
+  testable: true
+  enforced: true
+  cors:
+    enabled: true
+  catalogs:
+    apic-dev:
+      properties:
+        runtime-url: $(TARGET_URL)
+    sb:
+      properties:
+        runtime-url: 'http://localhost:4001'
+  assembly:
+    execute:
+      - invoke:
+          target-url: $(runtime-url)$(request.path)$(request.search)
