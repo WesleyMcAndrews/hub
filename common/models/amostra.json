@@ -5,7 +5,88 @@
   "options": {
     "validateUpsert": true
   },
-  "properties": {},
+  "properties": {
+    "id": {
+      "type": "string",
+      "required": false
+    },
+    "remessaId": {
+      "type": "string",
+      "required": false
+    },
+    "lacre": {
+      "type": "string",
+      "required": false
+    },
+    "cintaIdentificadora": {
+      "type": "string",
+      "required": false
+    },
+    "emailResponsavelColeta": {
+      "type": "string",
+      "required": false
+    },
+    "dataColeta": {
+      "type": "date",
+      "required": false
+    },
+    "dataFabricacao": {
+      "type": "date",
+      "required": false
+    },
+    "dataVencimento": {
+      "type": "date",
+      "required": false
+    },
+    "condicaoAmostra": {
+      "type": "string",
+      "required": false
+    },
+    "classeMatrizId": {
+      "type": "string",
+      "required": false
+    },
+    "nomePadronizado": {
+      "type": "string",
+      "required": false
+    },
+    "tipoAmostra": {
+      "type": "string",
+      "required": false
+    },
+    "tipoAnalise": {
+      "type": "string",
+      "required": false
+    },
+    "lote": {
+      "type": "string",
+      "required": false
+    },
+    "qtde": {
+      "type": "number",
+      "required": false
+    },
+    "unidade": {
+      "type": "string",
+      "required": false
+    },
+    "determinacao": {
+      "type": "string",
+      "required": false
+    },
+    "custodia": {
+      "type": "number",
+      "required": false
+    },
+    "status": {
+      "type": "string",
+      "required": false
+    },
+    "conformidade": {
+      "type": "string",
+      "required": false
+    }
+  },
   "validations": [],
   "relations": {},
   "acls": [],

@@ -3239,6 +3239,366 @@ paths:
                 type: number
                 format: double
       deprecated: false
+  /Amostras:
+    post:
+      tags:
+        - Amostra
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: Amostra.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Amostra'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Amostra'
+      deprecated: false
+    patch:
+      tags:
+        - Amostra
+      summary: Patch an existing model instance or insert a new one into the data source.
+      operationId: Amostra.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Amostra'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Amostra'
+      deprecated: false
+    put:
+      tags:
+        - Amostra
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: Amostra.replaceOrCreate__put_Amostras
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Amostra'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Amostra'
+      deprecated: false
+    get:
+      tags:
+        - Amostra
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: Amostra.find
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Amostra'
+      deprecated: false
+  /Amostras/replaceOrCreate:
+    post:
+      tags:
+        - Amostra
+      summary: Replace an existing model instance or insert a new one into the data source.
+      operationId: Amostra.replaceOrCreate__post_Amostras_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Amostra'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Amostra'
+      deprecated: false
+  /Amostras/upsertWithWhere:
+    post:
+      tags:
+        - Amostra
+      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
+      operationId: Amostra.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Amostra'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Amostra'
+      deprecated: false
+  '/Amostras/{id}/exists':
+    get:
+      tags:
+        - Amostra
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Amostra.exists__get_Amostras_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/Amostras/{id}':
+    head:
+      tags:
+        - Amostra
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Amostra.exists__head_Amostras_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - Amostra
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: Amostra.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: 'Filter defining fields and include - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Amostra'
+      deprecated: false
+    put:
+      tags:
+        - Amostra
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: 'Amostra.replaceById__put_Amostras_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Amostra'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Amostra'
+      deprecated: false
+    delete:
+      tags:
+        - Amostra
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: Amostra.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - Amostra
+      summary: Patch attributes for a model instance and persist it into the data source.
+      operationId: Amostra.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Amostra'
+        - name: id
+          in: path
+          description: Amostra id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Amostra'
+      deprecated: false
+  '/Amostras/{id}/replace':
+    post:
+      tags:
+        - Amostra
+      summary: Replace attributes for a model instance and persist it into the data source.
+      operationId: 'Amostra.replaceById__post_Amostras_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Amostra'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Amostra'
+      deprecated: false
+  /Amostras/findOne:
+    get:
+      tags:
+        - Amostra
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: Amostra.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Amostra'
+      deprecated: false
+  /Amostras/update:
+    post:
+      tags:
+        - Amostra
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: Amostra.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Amostra'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /Amostras/count:
+    get:
+      tags:
+        - Amostra
+      summary: Count instances of the model matched by where from the data source.
+      operationId: Amostra.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
 definitions:
   Remessa:
     properties:
@@ -3377,6 +3737,55 @@ definitions:
         type: string
       ativo:
         type: boolean
+    additionalProperties: false
+  Amostra:
+    properties:
+      id:
+        type: number
+        format: double
+      remessaId:
+        type: string
+      lacre:
+        type: string
+      cintaIdentificadora:
+        type: string
+      emailResponsavelColeta:
+        type: string
+      dataColeta:
+        type: string
+        format: date-time
+      dataFabricacao:
+        type: string
+        format: date-time
+      dataVencimento:
+        type: string
+        format: date-time
+      condicaoAmostra:
+        type: string
+      classeMatrizId:
+        type: string
+      nomePadronizado:
+        type: string
+      tipoAmostra:
+        type: string
+      tipoAnalise:
+        type: string
+      lote:
+        type: string
+      qtde:
+        type: number
+        format: double
+      unidade:
+        type: string
+      determinacao:
+        type: string
+      custodia:
+        type: number
+        format: double
+      status:
+        type: string
+      conformidade:
+        type: string
     additionalProperties: false
 basePath: /api
 swagger: '2.0'
